@@ -1,0 +1,100 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Bio-ORACLE Mediterranean Replication",
+  "description": "Replication of Rutterford et al. (2023) testing whether sea surface temperature is the primary driver of fish community structure, applied to the Mediterranean Sea using the ClimateFish database and Bio-ORACLE environmental layers.",
+  "identifier": "https://github.com/annefou/bio-oracle",
+  "codeRepository": "https://github.com/annefou/bio-oracle",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "1.0.0",
+  "dateCreated": "2026-04-16",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "Python",
+    "url": "https://www.python.org/"
+  },
+  "runtimePlatform": "Python 3.12",
+  "operatingSystem": "Linux, macOS",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Anne",
+      "familyName": "Fouilloux",
+      "@id": "https://orcid.org/0000-0002-1784-2920",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "LifeWatch ERIC"
+      }
+    }
+  ],
+  "keywords": [
+    "species distribution modelling",
+    "sea surface temperature",
+    "Mediterranean Sea",
+    "fish community ecology",
+    "replication study",
+    "Bio-ORACLE",
+    "ClimateFish",
+    "FORRT",
+    "nanopublication"
+  ],
+  "softwareRequirements": [
+    "Python >= 3.10",
+    "xarray",
+    "pandas",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "requests",
+    "netCDF4",
+    "rioxarray"
+  ],
+  "referencePublication": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Sea temperature is the primary driver of recent and predicted fish community structure across Northeast Atlantic shelf seas",
+      "author": "Rutterford, L.A., Simpson, S.D., Bogstad, B., Devine, J.A. & Genner, M.J.",
+      "datePublished": "2023",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "9",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "29",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Global Change Biology"
+          }
+        }
+      },
+      "@id": "https://doi.org/10.1111/gcb.16633"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Bio-ORACLE v2.0: Extending marine data layers for bioclimatic modelling",
+      "author": "Assis, J., Tyberghein, L., Bosch, S., Verbruggen, H., Serrão, E.A. & De Clerck, O.",
+      "datePublished": "2018",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "27",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Global Ecology and Biogeography"
+          }
+        }
+      },
+      "@id": "https://doi.org/10.1111/geb.12693"
+    }
+  ],
+  "isPartOf": {
+    "@type": "SoftwareApplication",
+    "name": "Science Live Platform",
+    "url": "https://platform.sciencelive4all.org/"
+  },
+  "contIntegration": "https://github.com/annefou/bio-oracle/actions",
+  "developmentStatus": "active"
+}

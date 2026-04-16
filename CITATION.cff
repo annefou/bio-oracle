@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+title: "Bio-ORACLE Mediterranean Replication: SST as primary driver of fish community structure"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Fouilloux
+    given-names: Anne
+    orcid: "https://orcid.org/0000-0002-1784-2920"
+    affiliation: "LifeWatch ERIC"
+abstract: >-
+  Replication of Rutterford et al. (2023) testing whether sea surface
+  temperature is the primary driver of fish community structure, applied
+  to the Mediterranean Sea using the ClimateFish database (Azzurro et al.,
+  2022) and Bio-ORACLE environmental layers (Assis et al., 2018).
+keywords:
+  - species distribution modelling
+  - sea surface temperature
+  - Mediterranean Sea
+  - fish community ecology
+  - replication study
+  - Bio-ORACLE
+  - ClimateFish
+  - FORRT
+  - nanopublication
+license: MIT
+repository-code: "https://github.com/annefou/bio-oracle"
+references:
+  - type: article
+    title: "Sea temperature is the primary driver of recent and predicted fish community structure across Northeast Atlantic shelf seas"
+    authors:
+      - family-names: Rutterford
+        given-names: Louise A.
+      - family-names: Simpson
+        given-names: Stephen D.
+      - family-names: Bogstad
+        given-names: Bjarte
+      - family-names: Devine
+        given-names: Jennifer A.
+      - family-names: Genner
+        given-names: Martin J.
+    journal: "Global Change Biology"
+    volume: 29
+    issue: 9
+    start: 2510
+    end: 2521
+    year: 2023
+    doi: "10.1111/gcb.16633"
+  - type: article
+    title: "Bio-ORACLE v2.0: Extending marine data layers for bioclimatic modelling"
+    authors:
+      - family-names: Assis
+        given-names: Jorge
+      - family-names: Tyberghein
+        given-names: Lennert
+      - family-names: Bosch
+        given-names: Samuel
+      - family-names: Verbruggen
+        given-names: Heroen
+      - family-names: "Serrão"
+        given-names: "Ester A."
+      - family-names: "De Clerck"
+        given-names: Olivier
+    journal: "Global Ecology and Biogeography"
+    volume: 27
+    issue: 3
+    start: 277
+    end: 284
+    year: 2018
+    doi: "10.1111/geb.12693"
+  - type: article
+    title: "ClimateFish: A Collaborative Database to Track the Abundance of Selected Coastal Fish Species as Candidate Indicators of Climate Change in the Mediterranean Sea"
+    authors:
+      - family-names: Azzurro
+        given-names: Ernesto
+    journal: "Frontiers in Marine Science"
+    year: 2022
+    doi: "10.3389/fmars.2022.910887"

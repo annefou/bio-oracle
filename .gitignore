@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+_build/
+_static/
+
+# Data (large, downloaded by scripts)
+data/
+
+# Results — keep PNG figures, exclude CSVs and PDFs
+results/*.csv
+results/*.pdf

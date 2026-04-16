@@ -1,0 +1,41 @@
+version: 1
+project:
+  title: SST as Primary Driver of Fish Community Structure
+  short_title: SST Fish Community Replication
+  abstract: >
+    Reproduction and replication of Rutterford et al. (2023) testing whether
+    sea surface temperature (SST) is the primary driver of fish community
+    structure. Three independent analyses — using ICES DATRAS, ClimateFish,
+    and MEDITS data — all confirm the claim for continental shelf communities.
+  subject: marine ecology
+  keywords:
+    - sea surface temperature
+    - fish community structure
+    - PCoA
+    - Bio-ORACLE
+    - ICES DATRAS
+    - ClimateFish
+    - MEDITS
+    - replication
+    - FORRT
+    - nanopublications
+  github: https://github.com/annefou/bio-oracle
+  open_access: true
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  date: 2026-04-16
+  toc:
+    - file: index.md
+    - file: reproduction.md
+    - file: replication_climatefish.md
+    - file: replication_medits.md
+    - file: methods.md
+    - file: conclusions.md
+  bibliography:
+    - references.bib
+
+site:
+  template: book-theme
+  options:
+    logo_text: SST Fish Community Replication

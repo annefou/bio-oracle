@@ -1,0 +1,18 @@
+name: bio-oracle
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - nodejs=22
+  - mystmd
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - xarray
+  - netCDF4
+  - requests
+  - pip

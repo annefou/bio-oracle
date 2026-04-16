@@ -1,0 +1,198 @@
+Demo Scenario: From Biodiversity Dataset to Replication-Tracked Scientific Knowledge
+Title: Bio-ORACLE meets Science Live — replicating the SST-fish community claim in the Mediterranean
+
+The Problem
+Bio-ORACLE is one of the most widely used marine biodiversity datasets in the world — 32,000+ users, 1,500+ citations, used globally for species distribution modelling. But despite its reach, three things are missing:
+
+No Croissant metadata — ML frameworks like PyTorch, TensorFlow, and JAX cannot automatically discover or load it. It is invisible to tools like Google Dataset Search in the ML context.
+No structured claims — the scientific knowledge derived from it exists only in thousands of scattered papers, not as independently verifiable, machine-readable assertions.
+No replication tracking — among 1,500+ citing papers, many have independently tested the same claims, but there is no structured way to see whether the original findings hold across species, regions, and timeframes.
+
+
+Step 1 — Make Bio-ORACLE ML-ready with Croissant
+We describe Bio-ORACLE's sea surface temperature (SST) layer using the Croissant metadata format — a JSON-LD file that tells ML tools:
+
+What the dataset contains
+How to load it into PyTorch / TensorFlow / JAX
+Its spatial resolution (0.05 degrees, ~5.5km globally)
+Its temporal coverage (2000–2100, 10 decadal steps)
+Its license and provenance
+Its CMIP6 climate scenario variants (SSP1, SSP2, SSP5)
+
+This Croissant file is published on Hugging Face, making Bio-ORACLE's SST layer discoverable by Google Dataset Search for the first time in an ML context.
+
+
+Step 2 — Create nanopublications on Science Live
+
+We create a chain of five nanopublications on Science Live, following the same pattern
+used for the DGGS, ZKP, and WeatherXBiodiversity showcases.
+
+
+--- Nanopub 1: Paper Quotation ---
+
+Source paper: Rutterford, L.A., Simpson, S.D., Bogstad, B., Devine, J.A. & Genner, M.J. (2023).
+             Sea temperature is the primary driver of recent and predicted fish community
+             structure across Northeast Atlantic shelf seas.
+             Global Change Biology, 29(9), 2510-2521.
+             DOI: 10.1111/gcb.16633
+
+Quotation:  "In conclusion, our study clearly identifies sea temperature as the primary
+             driver of fish community composition across the Northeast Atlantic
+             continental shelf."
+
+Comment:     Rutterford et al. analysed standardised abundance data for 198 marine fish
+             species across 23 fisheries trawl surveys (31,502 sampling events, 2005-2018)
+             from southern Spain to northern Norway. Their PCoA analysis showed SST was the
+             environmental variable most closely associated with the first axis of variation,
+             explaining 29% of variance (R²=0.890). Rutterford et al. used Bio-ORACLE
+             (Assis et al., 2018; DOI: 10.1111/geb.12693) for their future SST projections.
+             Bio-ORACLE v2.0 provides global marine environmental layers at 5 arcmin
+             (~9.2 km) resolution, with temperature layers validated against 445,248 in situ
+             quality-controlled records (Pearson's r = 0.99, MAE = 0.39°C).
+
+
+--- Nanopub 2: AIDA Sentence ---
+
+AIDA format (Activity - Input - Data - Analysis):
+  "According to Rutterford et al. (2023), analysis of standardised abundance data for
+   198 fish species across the Northeast Atlantic (2005-2018) identifies sea surface
+   temperature as the primary driver of fish community structure, explaining 29% of
+   community variation, followed by salinity (21%) and depth (12%)."
+
+
+--- Nanopub 3: FORRT Replication ---
+
+Original study:  Rutterford et al. (2023), DOI: 10.1111/gcb.16633
+Claim:           Sea surface temperature is the primary driver of fish community
+                 structure across Northeast Atlantic shelf seas.
+Domain:          Marine ecology / Fish community ecology
+Evidence type:   Observational (standardised trawl survey analysis + PCoA + regression)
+
+
+--- Nanopub 4: FORRT Replication Study ---
+
+Replication study: Fouilloux, A. (2026). Replicating the SST-fish community relationship
+                   in the Mediterranean Sea using ClimateFish and Bio-ORACLE.
+
+Original study tested:  Rutterford et al. (2023), DOI: 10.1111/gcb.16633
+
+Replication approach:   We test whether sea surface temperature is also the primary driver
+                        of fish species abundance in the Mediterranean Sea, using:
+                        - ClimateFish database (Azzurro et al., 2022): abundance data for
+                          15 indicator fish species (7 indigenous + 8 non-indigenous) from
+                          3,142 visual census transects across 7 Mediterranean countries
+                          (2009-2021), openly available via SEANOE/OBIS
+                        - Bio-ORACLE v2.0 SST layers for environmental data
+                        - Same analytical approach: community analysis (PCoA on Bray-Curtis
+                          similarity) + regression against environmental variables
+
+Relationship to original: Independent test of the same claim (SST as primary driver)
+                          in a different region (Mediterranean vs. NE Atlantic),
+                          using a different data source (visual census vs. trawl surveys),
+                          with a different species set (climate indicator species vs.
+                          full demersal community).
+
+Data sources:
+  - ClimateFish: https://www.seanoe.org/data/00756/86784/ (CC-BY 4.0)
+    Paper: Azzurro et al. (2022), Frontiers in Marine Science, DOI: 10.3389/fmars.2022.910887
+  - Bio-ORACLE: https://bio-oracle.org/ (Assis et al., 2018)
+  - Code repository: https://github.com/annefou/bio-oracle (TBD)
+
+
+--- Nanopub 5: FORRT Replication Outcome ---
+
+Outcome:     Confirmed
+Direction:   Consistent with original claim
+Summary:     Our PCoA analysis of 15 climate indicator fish species across 28
+             Mediterranean sites (aggregated from 2,222 ClimateFish visual census
+             transects, 2009-2021) confirms that sea surface temperature is the primary
+             driver of fish community structure. SST was the environmental variable most
+             strongly associated with PCoA Axis 1, which explained 45.2% of community
+             variation (r=-0.784, R²=0.615, p<0.001). Salinity was secondary (r=-0.472,
+             R²=0.222, p=0.011), and depth dominated Axes 2-3. This is consistent with
+             Rutterford et al.'s NE Atlantic finding (SST: R²=0.890 on Axis 1, 29%
+             variance). The lower R² in our study likely reflects the narrower SST range
+             in the Mediterranean (17-23°C) compared to the NE Atlantic (9-18°C), and
+             the smaller species pool (15 vs 198 species).
+Scope note:  The replication uses a different region (Mediterranean vs NE Atlantic),
+             different data collection method (visual census vs trawl surveys), and a
+             different species set (15 climate indicator species vs 198 demersal fish),
+             yet reaches the same conclusion.
+
+
+Summary table (after nanopubs are created on Science Live):
+
+| # | Type                      | Link |
+|---|---------------------------|------|
+| 1 | Paper quotation           | [view](https://platform.sciencelive4all.org/np/?uri=TBD) |
+| 2 | AIDA Sentence             | [view](https://platform.sciencelive4all.org/np/?uri=TBD) |
+| 3 | FORRT Replication         | [view](https://platform.sciencelive4all.org/np/?uri=TBD) |
+| 4 | FORRT Replication Study   | [view](https://platform.sciencelive4all.org/np/?uri=TBD) |
+| 5 | FORRT Replication Outcome | [view](https://platform.sciencelive4all.org/np/?uri=TBD) |
+
+
+Step 3 — Replication pipeline
+
+Similar to the WeatherXBiodiversity and DGGS replication pipelines, we build a
+reproducible analysis that re-tests the claim independently. The full pipeline
+is containerised in a Docker image published to GitHub Container Registry for
+reproducibility.
+
+| Step | Script                    | Input                          | Output                              |
+|------|---------------------------|--------------------------------|-------------------------------------|
+| 1    | 01_download_climatefish.py| SEANOE / OBIS API              | data/climatefish_med.csv            |
+| 2    | 02_download_biooracle.py  | Bio-ORACLE (sdmpredictors)     | data/biooracle_sst_med.nc           |
+| 3    | 03_spatial_join.py        | ClimateFish + Bio-ORACLE       | data/fish_environment_joined.csv    |
+| 4    | 04_community_analysis.py  | Joined data                    | results/pcoa_axes.csv               |
+| 5    | 05_variable_importance.py | PCoA axes + environment        | results/regression_table.csv        |
+|      |                           |                                | results/variable_importance.png     |
+
+Pipeline details:
+  1. Download ClimateFish abundance data (15 species, 7 countries, 2009-2021)
+  2. Download Bio-ORACLE environmental layers for the Mediterranean:
+     SST (mean), sea surface salinity, depth, and optionally chlorophyll-a
+  3. Spatial join: match each ClimateFish transect to Bio-ORACLE grid cell
+     environmental values based on coordinates
+  4. Community analysis: PCoA on Bray-Curtis similarity matrix of species
+     abundance across sites (following Rutterford et al.'s methodology)
+  5. Variable importance: multiple linear regression of PCoA axes against
+     environmental variables (SST, salinity, depth) with stepwise AIC selection
+     → Does SST explain the largest proportion of community variation?
+
+Key question: Does SST emerge as the primary driver of fish community structure
+in the Mediterranean, as Rutterford et al. (2023) found for the NE Atlantic?
+
+
+Step 4 — The connection: Croissant, Science Live, and FORRT linked together
+
+The Croissant metadata file includes a field pointing to the Science Live nanopublication
+as the claim derived from the dataset. The original claim nanopub links to its replication
+nanopubs. The replication nanopubs link back to both the original claim and the FORRT entry.
+
+For the first time, anyone can go from:
+
+"I want to train a species distribution model" → find Bio-ORACLE via Croissant on Hugging Face
+"I want to know what this dataset proves" → follow the link to the Science Live claim
+"Has this claim been replicated?" → see the replication — tested for Mediterranean fish
+"I want to verify the replication" → the full pipeline is open, citable and reproducible
+
+
+What this demonstrates
+
+Layer                   Tool                                What it provides
+Dataset discovery       Croissant on Hugging Face           ML-ready, loadable in PyTorch/TF/JAX
+Original claim          Science Live nanopublication        Atomic, citable, machine-readable
+Replication tracking    Science Live + FORRT                Structured replication outcome linked to original
+Evidence traceability   Science Live chain                  Claim → replication study → dataset → code
+Reproducibility         Open code + data + Docker           ClimateFish (CC-BY) + Bio-ORACLE + GitHub pipeline + GHCR container
+
+
+Why it matters
+
+A marine biologist, fisheries manager, or conservation NGO can now:
+
+Find the Bio-ORACLE dataset automatically via ML tools
+Understand what it proves: SST drives fish community structure (NE Atlantic)
+See whether the claim holds in the Mediterranean — our replication tests this
+Trust the evidence chain because it is transparent, independently verifiable, and replication-tracked
+Build on it knowing exactly what conditions and species the claim has been tested for

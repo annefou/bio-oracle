@@ -1,0 +1,11 @@
+xarray
+rioxarray
+netCDF4
+pandas
+numpy
+scipy
+scikit-bio
+scikit-learn
+matplotlib
+seaborn
+requests
