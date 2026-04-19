@@ -1,5 +1,7 @@
 # SST as Primary Driver of Fish Community Structure
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19628179.svg)](https://doi.org/10.5281/zenodo.19628179)
+
 Rutterford et al. (2023) {cite}`rutterford2023sea` demonstrated that **sea surface temperature (SST) is the primary driver of fish community structure** across the Northeast Atlantic continental shelf. This project tests that claim at three levels:
 
 | Level | Dataset | Region | Method | Result |
@@ -97,4 +99,8 @@ docker build -t bio-oracle-replication .
 docker run -v $(pwd)/results:/app/results bio-oracle-replication
 ```
 
-The full pipeline code is available at [github.com/annefou/bio-oracle](https://github.com/annefou/bio-oracle).
+The full pipeline code is available at [github.com/annefou/bio-oracle](https://github.com/annefou/bio-oracle) and archived on Zenodo at [doi.org/10.5281/zenodo.19628179](https://doi.org/10.5281/zenodo.19628179).
+
+## Citation
+
+> Fouilloux, A. (2026). *Bio-ORACLE Mediterranean Replication: SST as primary driver of fish community structure*. Zenodo. [https://doi.org/10.5281/zenodo.19628179](https://doi.org/10.5281/zenodo.19628179)

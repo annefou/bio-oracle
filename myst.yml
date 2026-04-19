@@ -20,6 +20,7 @@ project:
     - FORRT
     - nanopublications
   github: https://github.com/annefou/bio-oracle
+  doi: 10.5281/zenodo.19628179
   open_access: true
   license:
     content: CC-BY-4.0
