@@ -2,6 +2,10 @@ cff-version: 1.2.0
 title: "Bio-ORACLE Mediterranean Replication: SST as primary driver of fish community structure"
 message: "If you use this software, please cite it using the metadata from this file."
 type: software
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19628179
+    description: "Zenodo concept DOI (all versions)"
 authors:
   - family-names: Fouilloux
     given-names: Anne
